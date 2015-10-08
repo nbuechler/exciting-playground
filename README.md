@@ -6,9 +6,15 @@ this is a place where I can experiment and wipe out code and learn, feel free to
 This repository might get a little crazy because it is a scratch pad for learning.
 
 
+#CREDITS to others:
+react-hot-boilerplate (https://github.com/gaearon/react-hot-boilerplate)
+
+
 #Below this line is the readme files from other repositories for reference.
 
-react-hot-boilerplate
+
+
+react-hot-boilerplate (https://github.com/gaearon/react-hot-boilerplate)
 =====================
 
 The minimal dev environment to enable live-editing React components.
