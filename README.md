@@ -8,7 +8,7 @@ This repository might get a little crazy because it is a scratch pad for learnin
 
 #CREDITS to others:
 react-hot-boilerplate (https://github.com/gaearon/react-hot-boilerplate)
-
+Redux docs -- http://rackt.github.io/redux/docs/advanced/ExampleRedditAPI.html
 
 #Below this line is the readme files from other repositories for reference.
 
