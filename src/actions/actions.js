@@ -26,6 +26,7 @@ function requestPosts(reddit) {
   };
 }
 
+//This is the Map part
 function receivePosts(reddit, json) {
   return {
     type: RECEIVE_POSTS,
