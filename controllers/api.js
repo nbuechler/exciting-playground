@@ -27,10 +27,41 @@ var _ = require('lodash');
 var async = require('async');
 var querystring = require('querystring');
 
+//npm install fetch
+var fetchUrl = require("fetch").fetchUrl;
 
 var secrets = require('../config/secrets');
 
+/**
+ * GET /foo
+ * List of foo examples.
+ */
 
+ exports.getFoo = function(req, res) {
+   res.render('foo/index', {
+     title: 'FOO Examples'
+   });
+ };
+ exports.getFoo01 = function(req, res) {
+   var options = {
+        headers:{
+            "X-My-Header": "This is a custom header field"
+        },
+        method: 'GET'
+    }
+   fetchUrl("http://localhost:5000/dummy", options, function(error, meta, body){
+     console.log(body.toString());
+     res.send(body.toString());
+   });
+  //  res.render('foo/f01', {
+  //    title: 'FOO 01'
+  //  });
+ };
+ exports.getFoo02 = function(req, res) {
+   res.render('foo/f02', {
+     title: 'FOO 02'
+   });
+ };
 
 /**
  * GET /api

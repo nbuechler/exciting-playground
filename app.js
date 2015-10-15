@@ -41,6 +41,13 @@ var passportConf = require('./config/passport');
  */
 var app = express();
 
+
+/**
+ * Create cors support.
+ */
+var cors = require('cors')
+
+
 /**
  * Connect to MongoDB.
  */
@@ -53,7 +60,7 @@ mongoose.connection.on('error', function() {
 /**
  * Express configuration.
  */
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 3001);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.use(compress());
@@ -115,6 +122,16 @@ app.post('/account/profile', passportConf.isAuthenticated, userController.postUp
 app.post('/account/password', passportConf.isAuthenticated, userController.postUpdatePassword);
 app.post('/account/delete', passportConf.isAuthenticated, userController.postDeleteAccount);
 app.get('/account/unlink/:provider', passportConf.isAuthenticated, userController.getOauthUnlink);
+
+
+/**
+ * List of foo examples.
+ * Read about this to configure cors better!
+ * https://www.npmjs.com/package/cors
+ */
+app.get('/foo', apiController.getFoo);
+app.get('/foo01', cors(), apiController.getFoo01); //'This is CORS-enabled for all origins!'
+app.get('/foo02', cors(), apiController.getFoo02); //'This is CORS-enabled for all origins!'
 
 /**
  * API examples routes.
