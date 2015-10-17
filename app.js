@@ -132,6 +132,7 @@ app.get('/account/unlink/:provider', passportConf.isAuthenticated, userControlle
 app.get('/foo', apiController.getFoo);
 app.get('/foo01', cors(), apiController.getFoo01); //'This is CORS-enabled for all origins!'
 app.get('/foo02', cors(), apiController.getFoo02); //'This is CORS-enabled for all origins!'
+app.post('/postRemoteSignUp', cors(), apiController.postRemoteSignUp); //'This is CORS-enabled for all origins!'
 
 /**
  * API examples routes.
