@@ -63,17 +63,6 @@ var secrets = require('../config/secrets');
    });
  };
 
- /**
-  * POST /postSignUp
-  * Create a new local account.
-  */
- exports.postRemoteSignUp = function(req, res) {
-   console.log('req');
-   res.send('You sent a request!')
-
- };
-
-
 /**
  * GET /api
  * List of API examples.

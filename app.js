@@ -87,7 +87,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
 app.use(lusca({
-  csrf: true,
+  csrf: false, //!!Turn on csrf token later ;)
   xframe: 'SAMEORIGIN',
   xssProtection: true
 }));
@@ -132,7 +132,7 @@ app.get('/account/unlink/:provider', passportConf.isAuthenticated, userControlle
 app.get('/foo', apiController.getFoo);
 app.get('/foo01', cors(), apiController.getFoo01); //'This is CORS-enabled for all origins!'
 app.get('/foo02', cors(), apiController.getFoo02); //'This is CORS-enabled for all origins!'
-app.post('/postRemoteSignUp', cors(), apiController.postRemoteSignUp); //'This is CORS-enabled for all origins!'
+app.post('/postRemoteSignUp', cors(), userController.postRemoteSignUp); //'This is CORS-enabled for all origins!'
 
 /**
  * API examples routes.

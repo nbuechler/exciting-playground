@@ -67,13 +67,12 @@ exports.getSignup = function(req, res) {
 };
 
 /**
- * POST /postSignUp
+ * POST /postRemoteSignUp
  * Create a new local account.
  */
-exports.postRemoteSignUp = function(req, res) {
-  console.log('req');
-  res.send('You sent a request!')
-
+exports.postRemoteSignUp = function(req, res, next) {
+      console.log('heres a req! -success in postRemoteSignUp');
+      res.send('Got response. ;-)')
 };
 
 /**
