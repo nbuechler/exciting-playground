@@ -13,14 +13,14 @@ Currently, this project is very empty. I keep it around so that I can keep track
 
 # View the history
 From a terminal, clone the project and you too can view the git history.
-'''
+```
 git clone https://github.com/nbuechler/exciting-playground.git
-'''
+```
 
 View the log
-'''
+```
 git log
-'''
+```
 
 # License
 MIT
